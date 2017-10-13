@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        System.out.println(">> harass-lan 0.0.1-beta1");
+        System.out.println(">> harass-lan 0.0.1-beta1 <<");
         Options opts = new Options();
         opts.addOption("h", false, "帮助");
         opts.addOption("p", true, "去干扰的端口列表，英文逗号分隔");

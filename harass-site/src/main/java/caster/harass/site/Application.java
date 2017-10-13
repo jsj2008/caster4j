@@ -6,7 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        System.out.println(">> harass-site 0.0.1-beta1");
+        System.out.println(">> harass-site 0.0.1-beta1 <<");
         Options opts = new Options();
         opts.addOption("h", false, "帮助");
         opts.addOption("t", true, "开多少线程来跑，默认值为“4”");
