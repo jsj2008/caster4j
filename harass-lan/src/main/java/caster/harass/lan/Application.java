@@ -59,7 +59,7 @@ public class Application {
                 return;
             }
 
-            HarassLan.handle(ports, threadNum);
+            HarassLan.exec(ports, threadNum);
         }
     }
 

@@ -7,7 +7,7 @@ import java.net.*;
 
 public class HarassLan {
 
-    public static void handle(Integer[] ports, int threadNum) throws UnknownHostException {
+    public static void exec(Integer[] ports, int threadNum) throws UnknownHostException {
         if (ArrayUtils.isEmpty(ports)) {
             System.out.println("端口列表不能为空！");
             return;
