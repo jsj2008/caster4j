@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import saber.util.JMap;
 import saber.util.ServletUtils;
 import saber.util.Time;
@@ -22,16 +23,19 @@ public class PlainController {
         response.getWriter().write(req);
     }
 
+    @ResponseBody
     @RequestMapping(value = "/time", method = RequestMethod.GET)
     public Object time(@RequestParam(name = "pattern", defaultValue = "yyyy-MM-dd HH:mm:ss SSS") String pattern) {
         return JMap.on(200).setData(Time.on().format(pattern));
     }
 
+    @ResponseBody
     @RequestMapping(value = "/timestamp", method = RequestMethod.GET)
     public Object timestamp() {
         return JMap.on(200).setData(Time.on().getTimestamp());
     }
 
+    @ResponseBody
     @RequestMapping(value = "/unix-timestamp", method = RequestMethod.GET)
     public Object unixTimestamp() {
         return JMap.on(200).setData(Time.on().getUnixTimestamp());
